@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# .Xclients:  startup script for X Windows
+#
+# show a watch cursor to indicate
+# that we're starting things up
+xsetroot -cursor_name watch
+#
+# start clock
+xclock -d -update 1 -twentyfour &
+#
+# (other X clients here)
+#
+cd ~ && xterm -ls -e screen -R &
+# change to a regular pointer to show
+# that we're ready for use
+xsetroot -cursor_name top_left_arrow
+#
+# and finally, start window manager
+#exec fvwm
+exec openbox
+#
+# -------- End of .Xclients --------
