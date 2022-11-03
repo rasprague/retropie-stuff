@@ -2,6 +2,6 @@
 
 echo "Killing udhcpd . . ."
 
-killall udhcpd
+sudo pkill -f "busybox udhcpd"
 
 echo "done."
