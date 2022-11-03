@@ -1,11 +1,10 @@
 #!/bin/bash
 
+DIR=$(dirname "$0")
 echo "Activatnig HDMI screen resolution . . . "
-cd /boot
-sudo cp config.txt.hdmi config.txt
+sudo cp $DIR/config.txt.hdmi /boot/config.txt
 echo "Setting HDMI audio out . . . "
-cd /home/pi
-rm .asoundrc
-ln -s .asoundrc.hdmi1 .asoundrc
+rm /home/pi/.asoundrc
+ln -s $DIR/.asoundrc.hdmi1 /home/pi/.asoundrc
 echo "Done. Reboot system to appply changes."
 sleep 1
