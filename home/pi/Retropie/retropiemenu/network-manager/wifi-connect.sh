@@ -29,7 +29,7 @@ else
 fi
 
 PASSWORD=""
-TMPFILE=$(mktemp /tmp/wifi.XXXXXX)
+TMPFILE=$(mktemp /tmp/wifi-connect.XXXXXX)
 python3 "$OSK_BIN" --backtitle "Enter Password" --inputbox "Password for $SSID" 2>$TMPFILE
 if [ $? -eq 0 ]; then
     PASSWORD=$(cat "$TMPFILE")
