@@ -1,11 +1,10 @@
 #!/bin/bash
 
+DIR=$(dirname "$0")
 echo "Activatnig LCD 3.5 screen resolution . . . "
-cd /boot
-sudo cp config.txt.lcd35 config.txt
+sudo cp $DIR/config.txt.lcd35 /bootconfig.txt
 echo "Setting seeed2micvoicec audio out . . . "
-cd /home/pi
-rm .asoundrc
-ln -s .asoundrc.seeed2micvoicec .asoundrc
+rm /home/pi.asoundrc
+ln -s $DIR/.asoundrc.seeed2micvoicec /home/pi.asoundrc
 echo "Done. Reboot system to appply changes."
 sleep 1
