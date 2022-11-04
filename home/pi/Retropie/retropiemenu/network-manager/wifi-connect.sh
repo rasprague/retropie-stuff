@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Menu-driven and On-screen Keyboard for you RetroPie pleasure
+# Menu-driven and On-screen Keyboard for your RetroPie pleasure
 # connect to a Wifi network via network-manager
 
 dialog --infobox "Scanning for Wifi networks . . ." 3 36
