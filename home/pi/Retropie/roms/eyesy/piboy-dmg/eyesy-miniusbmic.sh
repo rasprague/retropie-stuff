@@ -1,5 +1,5 @@
 #!/bin/bash
-DEVICE="default:CARD=Device"
+DEVICE="hw:CARD=Device,DEV=0"
 RATE=44100
 CONTROLLER_MAPPING="piboy-mapping.py"
 
