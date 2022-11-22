@@ -12,7 +12,7 @@ StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=btmidi
 Restart=always
-ExecStart=/usr/bin/btmidi-server -n "RP4-Bluetooth"
+ExecStart=/usr/bin/btmidi-server -n "PiBoyDMG-retropie"
 
 [Install]
 WantedBy=multi-user.target
