@@ -1,0 +1,13 @@
+[Unit]
+Description=framebuffer copy to spi screen
+Before=basic.target
+After=local-fs.target
+After=multi-user.target
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/home/pi/code/fbcp-ili9341/build/fbcp-ili9341
+
+[Install]
+WantedBy=basic.target
